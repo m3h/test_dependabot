@@ -1,0 +1,20 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+registries:
+  myindex:
+    type: python-index
+    url: https://volker.page/test_pypi_repo
+    username: octocat
+    password: ${{secrets.MY_BASIC_AUTH_PASSWORD}}
+    replaces-base: true
+updates:
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    insecure-external-code-execution: allow
+    registries: "*"
+    schedule:
+      interval: "weekly"
