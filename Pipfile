@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://${TEST_USER}:${TEST_PASS}@volker.page/test_pypi_repo"
+verify_ssl = true
+name = "myindex"
+
+[packages]
+example-package-m3h = {version = "==0.0.1", index = "myindex"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
