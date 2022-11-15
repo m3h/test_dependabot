@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [[source]]
-url = "https://${TEST_USER}:${TEST_PASS}@volker.page/test_pypi_repo"
+url = "https://${TEST_USER}:${TEST_PASS}@pypi.org/simple"
 verify_ssl = true
 name = "myindex"
 
