@@ -4,12 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [[source]]
-url = "https://${TEST_USER}:${TEST_PASS}@pypi.org/simple"
+url = "https://${TEST_USER}:${TEST_PASS}@test.pypi.org/simple"
 verify_ssl = true
-name = "myindex"
+name = "testindex"
 
 [packages]
-requests = {version = "==2.14", index = "myindex"}
+requests = {version = "*"}
+example-package-m3h = {version = "*", index = "testindex"}
 
 [dev-packages]
 
