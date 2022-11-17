@@ -9,7 +9,7 @@ verify_ssl = true
 name = "myindex"
 
 [packages]
-requests = {version = "*", index = "myindex"}
+requests = {version = "==2.14", index = "myindex"}
 
 [dev-packages]
 
